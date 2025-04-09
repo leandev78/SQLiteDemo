@@ -14,7 +14,7 @@ public class Gerente extends Empleado  {
 		
 		double sueldo = this.suedoBase + this.sueldo + this.antiguedad;
 		
-		System.out.println(". Sueldo Empleado Gerente: " + sueldo);
+		System.out.println(". Sueldo Empleado Gerente: " + sueldo + " con DNI: " + this.dni);
 	}
 
 }

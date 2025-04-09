@@ -14,7 +14,7 @@ public class Administrativo extends Empleado {
 
 		double sueldo = this.suedoBase + this.sueldo + this.viaticos;
 		
-		System.out.println(". Sueldo Empleado Administrativo: " + sueldo);
+		System.out.println(". Sueldo Empleado Administrativo: " + sueldo + " con DNI: " + this.dni);
 		
 	}
 

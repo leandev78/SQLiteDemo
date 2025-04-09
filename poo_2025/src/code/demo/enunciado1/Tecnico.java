@@ -14,7 +14,7 @@ public class Tecnico extends Empleado {
 
 		double sueldo = this.suedoBase + this.sueldo;
 		
-		System.out.println(". Sueldo Empleado Técnico: " + sueldo);
+		System.out.println(". Sueldo Empleado Técnico: " + sueldo + " con DNI: " + this.dni);
 		
 	}
 
