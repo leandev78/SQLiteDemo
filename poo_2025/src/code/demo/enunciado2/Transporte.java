@@ -4,6 +4,6 @@ public interface Transporte {
 
 	double TARIFAMINIMA = 450;
 	
-	void calcularTarifa();
+	double calcularTarifa();
 	
 }
