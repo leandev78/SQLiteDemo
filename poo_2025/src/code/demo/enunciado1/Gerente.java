@@ -12,7 +12,7 @@ public class Gerente extends Empleado  {
 	@Override
 	public void calcularSalario() {
 		
-		double sueldo = this.suedoBase + this.sueldo + this.antiguedad;
+		double sueldo = Empleado.suedoBase + this.sueldo + this.antiguedad;
 		
 		System.out.println(". Sueldo Empleado Gerente: " + sueldo + " con DNI: " + this.dni);
 	}

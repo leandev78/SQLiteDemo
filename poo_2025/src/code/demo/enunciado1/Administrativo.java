@@ -12,7 +12,7 @@ public class Administrativo extends Empleado {
 	@Override
 	public void calcularSalario() {
 
-		double sueldo = this.suedoBase + this.sueldo + this.viaticos;
+		double sueldo = Empleado.suedoBase + this.sueldo + this.viaticos;
 		
 		System.out.println(". Sueldo Empleado Administrativo: " + sueldo + " con DNI: " + this.dni);
 		

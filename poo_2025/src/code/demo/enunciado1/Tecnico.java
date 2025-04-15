@@ -12,7 +12,7 @@ public class Tecnico extends Empleado {
 	@Override
 	public void calcularSalario() {
 
-		double sueldo = this.suedoBase + this.sueldo;
+		double sueldo = Empleado.suedoBase + this.sueldo;
 		
 		System.out.println(". Sueldo Empleado Técnico: " + sueldo + " con DNI: " + this.dni);
 		
