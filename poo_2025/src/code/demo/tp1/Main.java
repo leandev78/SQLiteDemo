@@ -10,6 +10,7 @@ public class Main {
 		
 		List<Empleado> empleados = new ArrayList<>();
 		
+		System.out.println("# Lista de empleados registrados:\n");
 		empleados.add(new Administrativo("Julian", "1233212321"));
 		empleados.add(new Tecnico("Laura", "434545665"));
 		empleados.add(new Tecnico("Fernando", "345454345"));
@@ -21,6 +22,8 @@ public class Main {
 			System.out.println(" El Salario de " + e.nombre + " con dni: " + e.dni + " es " +   e.calcularSalario() );
 		}
 		
+		
+		System.out.println("\n\n# Cantidad de empleados creados: " + Empleado.cantEmpleados);
 		
 
 	}
