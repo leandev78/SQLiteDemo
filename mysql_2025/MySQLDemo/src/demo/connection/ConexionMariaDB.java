@@ -20,7 +20,7 @@ public class ConexionMariaDB {
         if (conn == null) {
             try {
                 conn = DriverManager.getConnection(URL, USER, PASS);
-                System.out.println("Conexión establecida ✅.");
+                System.out.println("Conexión establecida.");
             } catch (SQLException e) {
                 System.out.println("Error de conexión: " + e.getMessage());
             }
@@ -33,10 +33,10 @@ public class ConexionMariaDB {
         if (conn != null) {
             try {
                 conn.close();
-                System.out.println("Conexión cerrada 🔒.");
+                System.out.println("Conexión cerrada.");
                 conn = null;
             } catch (SQLException e) {
-                System.out.println("❌ Error al cerrar la conexión: " + e.getMessage());
+                System.out.println("Error al cerrar la conexión: " + e.getMessage());
             }
         }
     }
