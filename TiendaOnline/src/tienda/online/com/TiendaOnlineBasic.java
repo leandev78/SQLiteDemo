@@ -1,7 +1,7 @@
 package tienda.online.com;
 
 import java.sql.SQLException;
-import tienda.online.com.repository.ProductoDAO;
+import tienda.online.com.repository.ProductoDAOSimple;
 
 public class TiendaOnlineBasic {
 
@@ -9,14 +9,14 @@ public class TiendaOnlineBasic {
 
 		int resp=0;
 		
-		ProductoDAO repositorioProducto = new ProductoDAO();
+		ProductoDAOSimple repositorioProducto = new ProductoDAOSimple();
 		
 		
 		// 1) Leer productos
 		
 		System.out.println("\n# METODO MOSTRAR ***************\n");
 		
-		repositorioProducto.leerProductos();
+		repositorioProducto.listarTodos();
 		
 		
 		// 2) Grabar un producto
@@ -24,10 +24,10 @@ public class TiendaOnlineBasic {
 		System.out.println("\n# METODO INSERTAR ***************\n");
 		
 		try {
-			resp = repositorioProducto.grabarProducto("Silla Gamer", "Silla XXX XXXX", 300.999, 2);
+			resp = repositorioProducto.grabar("Silla Gamer", "Silla XXX XXXX", 300.999, 2);
 			System.out.println("Producto insertado con ID = " + resp);
 		
-			repositorioProducto.leerProductos();
+			repositorioProducto.listarTodos();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -45,7 +45,7 @@ public class TiendaOnlineBasic {
 		System.out.println("\n# METODO ACTUALIZAR ***************\n");
 		
 		try {
-			resp = repositorioProducto.actualizarProducto(
+			resp = repositorioProducto.actualizar(
 					idInserted,
 			        "Silla Gamer",
 			        "Silla Sillon Gamer Pc Escritorio",
@@ -56,7 +56,7 @@ public class TiendaOnlineBasic {
 			e.printStackTrace();
 		}
         System.out.println("ActualizarProducto: filas afectadas = " + resp);
-        repositorioProducto.leerProductos();
+        repositorioProducto.listarTodos();
 
         
         // 5) Eliminar un producto.
@@ -65,10 +65,10 @@ public class TiendaOnlineBasic {
         
         try {
         	
-			resp = repositorioProducto.eliminarProducto( idInserted );
+			resp = repositorioProducto.eliminar( idInserted );
 			System.out.println("EliminarProducto: filas afectadas = " + resp);	 
 			
-			repositorioProducto.leerProductos();
+			repositorioProducto.listarTodos();
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
