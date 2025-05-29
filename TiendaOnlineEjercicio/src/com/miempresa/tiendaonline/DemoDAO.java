@@ -6,7 +6,7 @@ import java.util.List;
 import com.miempresa.tiendaonline.model.Producto;
 import com.miempresa.tiendaonline.repository.ProductoDAO;
 
-public class Demo {
+public class DemoDAO {
 
 	public static void main(String[] args) {
 

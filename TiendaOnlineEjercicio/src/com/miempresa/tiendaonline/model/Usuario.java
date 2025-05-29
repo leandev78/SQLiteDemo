@@ -19,5 +19,5 @@ public abstract class Usuario {
 		this.password = password;
 	}
 
-	public abstract Cliente  iniciarSesion(String email, String password);
+	public abstract String mostrarDatosPersonales();
 }

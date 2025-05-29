@@ -18,4 +18,14 @@ public class DetalleFactura {
         return cantidad + " x " + producto.getNombre() + " = $" + calcularSubtotal();
     }
     
+    public Producto getProducto() {
+		return this.producto;
+    	
+    }
+    
+    public int getCantidad() {
+		return this.cantidad;
+    	
+    }
+    
 }

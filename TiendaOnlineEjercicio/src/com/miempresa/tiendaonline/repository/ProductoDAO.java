@@ -7,53 +7,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
-
 import com.miempresa.tiendaonline.connection.Conexion;
 import com.miempresa.tiendaonline.model.Producto;
 
 
-import java.util.logging.Logger;
-
-
 public class ProductoDAO implements IProductoDAO {
-	
-	
-	public List<Producto> findByNombre(String nombreParcial) {
 		
-		List<Producto> list = new ArrayList<>();
-
-		String query = "SELECT * FROM producto WHERE nombre LIKE ?";
-		
-		Conexion con = new Conexion();
-		Connection cx = con.conectar();
-
-		try {
-			PreparedStatement ps = cx.prepareStatement(query);
-
-			ps.setString(1, nombreParcial);
-
-			ResultSet rs = ps.executeQuery();
-
-			if (rs.next()) {
-				list.add(
-						new Producto(
-							rs.getInt("id_producto"), 
-							rs.getString("nombre"), 
-							rs.getString("descripcion"), 
-							rs.getDouble("precio"), 
-							rs.getInt("stock"))
-						);				
-			}
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			con.desconectar();
-		}
-		return list;
-	}	
+	public ProductoDAO() {};
 	
+
 	/**
 	 * Obtiene todos los productos de la tabla producto.
 	 */	
@@ -259,6 +221,62 @@ public class ProductoDAO implements IProductoDAO {
         
 		return 0;
     }
+    
+    /**
+     * Busca un producto por su ID en una lista.
+     *
+     * @param productos Lista de productos disponible
+     * @param id        ID del producto a buscar
+     * @return Producto encontrado o null si no existe
+     */
+    public Producto findById(List<Producto> productos, int id) {
+        for (Producto p : productos) {
+            if (p.getIdProducto() == id) {
+                return p;
+            }
+        }
+        return null;
+    }
+    
+    /**
+     * Busca un producto por nombre de producto.
+     * @param nombreParcial Identificador del producto en formato String.
+     * @return un producto.
+     * @throws SQLException si ocurre un error de acceso a datos
+     */    
+	public List<Producto> findByNombre(String nombreParcial) {
+		
+		List<Producto> list = new ArrayList<>();
 
+		String query = "SELECT * FROM PRODUCTO WHERE nombre LIKE ?";
+		
+		Conexion con = new Conexion();
+		Connection cx = con.conectar();
 
+		try {
+			PreparedStatement ps = cx.prepareStatement(query);
+
+			ps.setString(1, nombreParcial);
+
+			ResultSet rs = ps.executeQuery();
+
+			if (rs.next()) {
+				list.add(
+						new Producto(
+							rs.getInt("id_producto"), 
+							rs.getString("nombre"), 
+							rs.getString("descripcion"), 
+							rs.getDouble("precio"), 
+							rs.getInt("stock"))
+						);				
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			con.desconectar();
+		}
+		return list;
+	}	
+	
 }
