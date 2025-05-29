@@ -10,8 +10,9 @@ import com.miempresa.tiendaonline.connection.Conexion;
 import com.miempresa.tiendaonline.model.DetalleFactura;
 import com.miempresa.tiendaonline.model.Factura;
 
-public class FacturaDAO {
+public class FacturaDAO implements IFacturaDAO {
 
+	@Override
 	public void guardar(Factura factura) {
 		
 		
@@ -52,6 +53,7 @@ public class FacturaDAO {
 	        conexion.desconectar();
 	    }
 	}
+
 
 	
 }

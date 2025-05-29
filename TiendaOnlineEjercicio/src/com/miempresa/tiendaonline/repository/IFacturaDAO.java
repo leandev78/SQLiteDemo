@@ -2,8 +2,10 @@ package com.miempresa.tiendaonline.repository;
 
 import java.sql.SQLException;
 
+import com.miempresa.tiendaonline.model.Factura;
+
 public interface IFacturaDAO {
 	
-	void guardar() throws SQLException;
+	void guardar(Factura factura) throws SQLException;
 	
 }
