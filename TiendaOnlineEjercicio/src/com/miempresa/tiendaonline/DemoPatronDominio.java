@@ -117,16 +117,17 @@ public class DemoPatronDominio {
                 
             	FacturaDAO facturaService = new FacturaDAO();
             	
-            	facturaService.guardar(factura);    //<-- realizar la presistencia !!!       
+            	//facturaService.guardar(factura);    //<-- realizar la presistencia !!!       
    
             	
-//            	¿Qué debe hacer factura.guardar()?
-//            	1) Insertar una fila en la tabla FACTURA (con cliente, fecha, total...).
-//
-//            	2) Obtener el id_factura generado por la base.
-//
-//            	3) Recorrer detalles y hacer un INSERT en DETALLE_FACTURA usando ese id_factura.            	
-//            	
+				//  ¿Qué debe hacer factura.guardar()?
+            	//
+				//   1) Insertar una fila en la tabla FACTURA (con cliente, fecha, total...).
+				//
+				//   2) Obtener el id_factura generado por la base.
+				//
+				//   3) Recorrer detalles y hacer un INSERT en DETALLE_FACTURA usando ese id_factura.            	
+				//            	
 
             	
                 System.out.println("Factura grabada correctamente.");

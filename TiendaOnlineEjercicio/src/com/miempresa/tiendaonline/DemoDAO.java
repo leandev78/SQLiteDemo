@@ -28,19 +28,9 @@ public class DemoDAO {
 
 		
 		
-		
-		// 3) Obtener último ID (opcional)
-		banner("3) Obtener último ID insertado");
-		int lastId = 0;
-		lastId = dao.obtenerMaxIdProducto();
-		System.out.println("-> Último ID = " + lastId);
-
-		
-		
-		
-		// 4) Actualizar ese mismo producto
+		// 3) Actualizar ese mismo producto
 		banner("4) Actualizar producto");
-		nuevo.setIdProducto(lastId);
+		nuevo.setIdProducto(id);
 		nuevo.setDescripcion("Silla con almohadones lumbar y cervical");
 		int updated = dao.actualizar(nuevo);
 		System.out.println("→ Filas afectadas al actualizar = " + updated);
@@ -49,7 +39,7 @@ public class DemoDAO {
 		
 		
 		
-		// 5) Eliminar el producto
+		// 4) Eliminar el producto
 		banner("5) Eliminar producto");
 
 		int deleted = dao.eliminar(nuevo);
@@ -58,6 +48,8 @@ public class DemoDAO {
 		printAll(dao.leer());
 	}
 
+	
+	
 	/** Imprime un separador con título */
 	private static void banner(String title) {
 		System.out.println("\n=== " + title + " ===\n");

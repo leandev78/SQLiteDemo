@@ -7,15 +7,17 @@ import java.sql.SQLException;
 public class Conexion {
 
 	private Connection cx = null;
-	private static final String DB_ENGINE = "sqlite"; // Cambiar entre "sqlite" y "mysql"
+	private static final String DB_ENGINE = "mysql"; // Cambiar entre "sqlite" y "mysql"
 
 	public Connection conectar() {
 
 		try {
+			// ¿Qué motor de base de datos voy a usar?
+			
 			switch (DB_ENGINE.toLowerCase()) {
 			
 				case "sqlite":
-					Class.forName("org.sqlite.JDBC");
+					Class.forName("org.sqlite.JDBC");  // ¿ Qué es esto ?
 					cx = DriverManager.getConnection("jdbc:sqlite:src/com/miempresa/tiendaonline/connection/carrito_compras.db");
 					break;
 
