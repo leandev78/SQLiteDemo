@@ -1,0 +1,270 @@
+2025-06-03 12:58:23.769903-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCTO" not found (candidates are: "producto"); SQL statement:
+INSERT INTO PRODUCTO (ID_PRODUCTO, NOMBRE, DESCRIPCION, PRECIO, STOCK) VALUES
+(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),
+(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),
+(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),
+(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),
+(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),
+(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),
+(7, 'Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 18) [42103-232]
+2025-06-03 12:59:14.951646-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCTO" not found (candidates are: "producto"); SQL statement:
+INSERT INTO producto (id_producto, nombre, descripcion, precio, stock) VALUES
+(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),
+(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),
+(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),
+(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),
+(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),
+(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),
+(7, 'Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 18) [42103-232]
+2025-06-03 12:59:49.262734-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "INSERT INTO [*]'producto' ('id_producto', 'nombre', 'descripcion', 'precio', 'stock') VALUES\000d\000a(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),\000d\000a(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),\000d\000a(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),\000d\000a(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),\000d\000a(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),\000d\000a(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),\000d\000a(7, 'Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 18)"; se esperaba "identifier"
+Syntax error in SQL statement "INSERT INTO [*]'producto' ('id_producto', 'nombre', 'descripcion', 'precio', 'stock') VALUES\000d\000a(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),\000d\000a(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),\000d\000a(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),\000d\000a(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),\000d\000a(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),\000d\000a(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),\000d\000a(7, 'Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 18)"; expected "identifier"; SQL statement:
+INSERT INTO 'producto' ('id_producto', 'nombre', 'descripcion', 'precio', 'stock') VALUES
+(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),
+(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),
+(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),
+(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),
+(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),
+(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),
+(7, 'Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 18) [42001-232]
+2025-06-03 13:00:25.768822-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCTO" not found (candidates are: "producto"); SQL statement:
+INSERT INTO producto (ID_PRODUCTO, NOMBRE, DESCRIPCION, PRECIO, STOCK) VALUES
+(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),
+(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),
+(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),
+(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),
+(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),
+(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),
+(7, 'Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 18) [42103-232]
+2025-06-03 13:00:49.855487-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "INSERT INTO ""\\""producto[*]\\"""" (ID_PRODUCTO, NOMBRE, DESCRIPCION, PRECIO, STOCK) VALUES\000d\000a(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),\000d\000a(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),\000d\000a(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),\000d\000a(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),\000d\000a(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),\000d\000a(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),\000d\000a(7, 'Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 18)"
+Syntax error in SQL statement "INSERT INTO ""\\""producto[*]\\"""" (ID_PRODUCTO, NOMBRE, DESCRIPCION, PRECIO, STOCK) VALUES\000d\000a(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),\000d\000a(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),\000d\000a(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),\000d\000a(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),\000d\000a(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),\000d\000a(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),\000d\000a(7, 'Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 18)"; SQL statement:
+INSERT INTO "\"producto\"" (ID_PRODUCTO, NOMBRE, DESCRIPCION, PRECIO, STOCK) VALUES
+(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),
+(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),
+(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),
+(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),
+(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),
+(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),
+(7, 'Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 18) [42000-232]
+2025-06-03 13:01:03.231360-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCTO" not found (candidates are: "producto"); SQL statement:
+INSERT INTO PRODUCTO (ID_PRODUCTO, NOMBRE, DESCRIPCION, PRECIO, STOCK) VALUES
+(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),
+(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),
+(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),
+(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),
+(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),
+(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),
+(7, 'Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 18) [42103-232]
+2025-06-03 13:34:36.643065-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCTO" not found (this database is empty); SQL statement:
+select p1_0.id_producto,p1_0.descripcion,p1_0.nombre,p1_0.precio,p1_0.stock from producto p1_0 [42104-232]
+2025-06-03 13:34:48.184348-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCTO" not found (this database is empty); SQL statement:
+select p1_0.id_producto,p1_0.descripcion,p1_0.nombre,p1_0.precio,p1_0.stock from producto p1_0 [42104-232]
+2025-06-03 13:37:04.330574-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARRITO" ya existe
+Table "CARRITO" already exists; SQL statement:
+CREATE TABLE CARRITO (
+  ID_CARRITO INT NOT NULL,
+  ID_CLIENTE INT NOT NULL,
+  FECHA_CREACION TIMESTAMP NOT NULL
+) [42101-232]
+2025-06-03 13:37:04.344484-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CLIENTE" ya existe
+Table "CLIENTE" already exists; SQL statement:
+CREATE TABLE CLIENTE (
+  ID_CLIENTE INT NOT NULL,
+  NOMBRE VARCHAR(100) NOT NULL,
+  APELLIDO VARCHAR(100) NOT NULL,
+  EMAIL VARCHAR(255) NOT NULL,
+  FECHA_REGISTRO TIMESTAMP,
+  PASSWORD VARCHAR(255),
+  DIRECCION VARCHAR(255),
+  TELEFONO VARCHAR(50)
+) [42101-232]
+2025-06-03 13:37:04.346483-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "DETALLE_FACTURA" ya existe
+Table "DETALLE_FACTURA" already exists; SQL statement:
+CREATE TABLE DETALLE_FACTURA (
+  ID_FACTURA INT NOT NULL,
+  ID_PRODUCTO INT NOT NULL,
+  CANTIDAD INT NOT NULL,
+  PRECIO_UNITARIO DOUBLE NOT NULL
+) [42101-232]
+2025-06-03 13:37:04.348487-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "FACTURA" ya existe
+Table "FACTURA" already exists; SQL statement:
+CREATE TABLE FACTURA (
+  ID_FACTURA INT NOT NULL,
+  ID_CLIENTE INT,
+  FECHA TIMESTAMP NOT NULL,
+  TOTAL DOUBLE NOT NULL
+) [42101-232]
+2025-06-03 13:37:04.350485-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "PRODUCTO" ya existe
+Table "PRODUCTO" already exists; SQL statement:
+CREATE TABLE PRODUCTO (
+  ID_PRODUCTO INT NOT NULL,
+  NOMBRE VARCHAR(150) NOT NULL,
+  DESCRIPCION VARCHAR(500),
+  PRECIO DOUBLE NOT NULL,
+  STOCK INT NOT NULL
+) [42101-232]
+2025-06-03 15:45:25.603514-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARRITO" ya existe
+Table "CARRITO" already exists; SQL statement:
+CREATE TABLE CARRITO (
+  ID_CARRITO INT NOT NULL,
+  ID_CLIENTE INT NOT NULL,
+  FECHA_CREACION TIMESTAMP NOT NULL
+) [42101-232]
+2025-06-03 15:45:25.612513-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARRITO_PRODUCTO" ya existe
+Table "CARRITO_PRODUCTO" already exists; SQL statement:
+CREATE TABLE CARRITO_PRODUCTO (
+  ID_CARRITO INT NOT NULL,
+  ID_PRODUCTO INT NOT NULL,
+  CANTIDAD INT NOT NULL
+) [42101-232]
+2025-06-03 15:45:25.613511-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CLIENTE" ya existe
+Table "CLIENTE" already exists; SQL statement:
+CREATE TABLE CLIENTE (
+  ID_CLIENTE INT NOT NULL,
+  NOMBRE VARCHAR(100) NOT NULL,
+  APELLIDO VARCHAR(100) NOT NULL,
+  EMAIL VARCHAR(255) NOT NULL,
+  FECHA_REGISTRO TIMESTAMP,
+  PASSWORD VARCHAR(255),
+  DIRECCION VARCHAR(255),
+  TELEFONO VARCHAR(50)
+) [42101-232]
+2025-06-03 15:45:25.615511-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "DETALLE_FACTURA" ya existe
+Table "DETALLE_FACTURA" already exists; SQL statement:
+CREATE TABLE DETALLE_FACTURA (
+  ID_FACTURA INT NOT NULL,
+  ID_PRODUCTO INT NOT NULL,
+  CANTIDAD INT NOT NULL,
+  PRECIO_UNITARIO DOUBLE NOT NULL
+) [42101-232]
+2025-06-03 15:45:25.617510-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "FACTURA" ya existe
+Table "FACTURA" already exists; SQL statement:
+CREATE TABLE FACTURA (
+  ID_FACTURA INT NOT NULL,
+  ID_CLIENTE INT,
+  FECHA TIMESTAMP NOT NULL,
+  TOTAL DOUBLE NOT NULL
+) [42101-232]
+2025-06-03 15:45:25.617510-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "PRODUCTO" ya existe
+Table "PRODUCTO" already exists; SQL statement:
+CREATE TABLE PRODUCTO (
+  ID_PRODUCTO INT NOT NULL,
+  NOMBRE VARCHAR(150) NOT NULL,
+  DESCRIPCION VARCHAR(500),
+  PRECIO DOUBLE NOT NULL,
+  STOCK INT NOT NULL
+) [42101-232]
+2025-06-03 15:48:58.396468-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE IF NOT EXISTS CARRITO_PRODUCTO (ID_CARRITO, ID_PRODUCTO, CANTIDAD) [*]VALUES\000d\000a(1, 1, 1),\000d\000a(1, 2, 2),\000d\000a(2, 3, 1)"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS CARRITO_PRODUCTO (ID_CARRITO, ID_PRODUCTO, CANTIDAD) [*]VALUES\000d\000a(1, 1, 1),\000d\000a(1, 2, 2),\000d\000a(2, 3, 1)"; SQL statement:
+CREATE TABLE IF NOT EXISTS CARRITO_PRODUCTO (ID_CARRITO, ID_PRODUCTO, CANTIDAD) VALUES
+(1, 1, 1),
+(1, 2, 2),
+(2, 3, 1) [42000-232]
+2025-06-03 15:58:33.074431-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE IF NOT EXISTS CARRITO_PRODUCTO (\000d\000a  ID_CARRITO INT NOT NULL,\000d\000a  ID_PRODUCTO INT NOT NULL,\000d\000a  CANTIDAD INT NOT NULL,\000d\000a   PRIMARY KEY (ID_CARRITO, ID_PRODUCTO), -- clave compuesta.\000d\000a[*])"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS CARRITO_PRODUCTO (\000d\000a  ID_CARRITO INT NOT NULL,\000d\000a  ID_PRODUCTO INT NOT NULL,\000d\000a  CANTIDAD INT NOT NULL,\000d\000a   PRIMARY KEY (ID_CARRITO, ID_PRODUCTO), -- clave compuesta.\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS CARRITO_PRODUCTO (
+  ID_CARRITO INT NOT NULL,
+  ID_PRODUCTO INT NOT NULL,
+  CANTIDAD INT NOT NULL,
+   PRIMARY KEY (ID_CARRITO, ID_PRODUCTO), -- clave compuesta.
+) [42001-232]
+2025-06-03 16:24:26.229770-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CLIENTE" ya existe
+Table "CLIENTE" already exists; SQL statement:
+-- TABLA CLIENTE
+CREATE TABLE CLIENTE (
+  ID_CLIENTE INT NOT NULL,
+  NOMBRE VARCHAR(100) NOT NULL,
+  APELLIDO VARCHAR(100) NOT NULL,
+  EMAIL VARCHAR(255) NOT NULL,
+  FECHA_REGISTRO TIMESTAMP,
+  PASSWORD VARCHAR(255),
+  DIRECCION VARCHAR(255),
+  TELEFONO VARCHAR(50),
+  PRIMARY K [42101-232]
+2025-06-03 16:24:26.236770-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "PRODUCTO" ya existe
+Table "PRODUCTO" already exists; SQL statement:
+-- TABLA PRODUCTO
+CREATE TABLE PRODUCTO (
+  ID_PRODUCTO INT NOT NULL,
+  NOMBRE VARCHAR(150) NOT NULL,
+  DESCRIPCION VARCHAR(500),
+  PRECIO DOUBLE NOT NULL,
+  STOCK INT NOT NULL,
+  PRIMARY K [42101-232]
+2025-06-03 16:24:26.237770-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "FACTURA" ya existe
+Table "FACTURA" already exists; SQL statement:
+-- TABLA FACTURA
+CREATE TABLE FACTURA (
+  ID_FACTURA INT NOT NULL,
+  ID_CLIENTE INT,
+  FECHA TIMESTAMP NOT NULL,
+  TOTAL DOUBLE NOT NULL,
+  PRIMARY KEY (ID_FACTURA),
+  FOREIGN KEY (ID_CLIENTE) REFERENCES CLIE [42101-232]
+2025-06-03 16:24:26.237770-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "DETALLE_FACTURA" ya existe
+Table "DETALLE_FACTURA" already exists; SQL statement:
+-- TABLA DETALLE_FACTURA
+CREATE TABLE DETALLE_FACTURA (
+  ID_FACTURA INT NOT NULL,
+  ID_PRODUCTO INT NOT NULL,
+  CANTIDAD INT NOT NULL,
+  PRECIO_UNITARIO DOUBLE NOT NULL,
+  PRIMARY KEY (ID_FACTURA, ID_PRODUCTO),
+  FOREIGN KEY (ID_FACTURA) REFERENCES FACTURA(ID_FACTURA),
+  FOREIGN KEY (ID_PRODUCTO) REFERENCE [42101-232]
+2025-06-03 16:24:26.238770-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARRITO" ya existe
+Table "CARRITO" already exists; SQL statement:
+-- TABLA CARRITO
+CREATE TABLE CARRITO  (
+  ID_CARRITO INT NOT NULL,
+  ID_CLIENTE INT NOT NULL,
+  FECHA_CREACION TIMESTAMP NOT NULL,
+  PRIMARY KEY (ID_CARRITO),
+  FOREIGN KEY (ID_CLIENTE) REFERENCES CLIE [42101-232]
+2025-06-03 16:24:26.239770-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARRITO_PRODUCTO" ya existe
+Table "CARRITO_PRODUCTO" already exists; SQL statement:
+-- TABLA CARRITO_PRODUCTO
+CREATE TABLE CARRITO_PRODUCTO (
+  ID_CARRITO INT NOT NULL,
+  ID_PRODUCTO INT NOT NULL,
+  CANTIDAD INT NOT NULL,
+  PRIMARY KEY (ID_CARRITO, ID_PRODUCTO),
+  FOREIGN KEY (ID_CARRITO) REFERENCES CARRITO(ID_CARRITO),
+  FOREIGN KEY (ID_PRODUCTO) REFERENC [42101-232]
+2025-06-03 16:27:54.663141-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "INSERT INTO PRODUCTO (ID_PRODUCTO, NOMBRE, DESCRIPCION, PRECIO, STOCK) VALUES\000d\000a(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),\000d\000a(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),\000d\000a(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),\000d\000a(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),\000d\000a(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),\000d\000a(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),\000d\000a(7, 'H2 Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 1[*]"; se esperaba "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, ,, )"
+Syntax error in SQL statement "INSERT INTO PRODUCTO (ID_PRODUCTO, NOMBRE, DESCRIPCION, PRECIO, STOCK) VALUES\000d\000a(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),\000d\000a(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),\000d\000a(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),\000d\000a(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),\000d\000a(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),\000d\000a(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),\000d\000a(7, 'H2 Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 1[*]"; expected "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, ,, )"; SQL statement:
+INSERT INTO PRODUCTO (ID_PRODUCTO, NOMBRE, DESCRIPCION, PRECIO, STOCK) VALUES
+(1, 'Teclado', 'Teclado mecánico retroiluminado', 3500, 50),
+(2, 'Mouse', 'Mouse óptico inalámbrico', 2000, 100),
+(3, 'Monitor', 'Monitor 24 pulgadas LED', 45000, 20),
+(4, 'Notebook', 'Notebook 17 pulgadas 12gb memoria', 789000, 3),
+(5, 'Auriculares', 'Auriculares bluetooth con micrófono', 850, 5),
+(6, 'Impresora', 'Impresora multifunción Wi-Fi', 255000, 25),
+(7, 'H2 Disco Externo', 'Disco rígido externo 1TB USB 3.0', 50000, 1 [42001-232]

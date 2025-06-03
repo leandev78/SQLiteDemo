@@ -27,7 +27,7 @@ public class ProductoController {
     @GetMapping
     public List<Producto> listar() {
         
-        System.out.println("Entró al método listar");
+        System.out.println("Entró al método listar Productos");
         return productoService.listarProductos();
     }    
 
