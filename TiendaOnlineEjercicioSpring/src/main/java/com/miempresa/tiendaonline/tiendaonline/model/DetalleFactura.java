@@ -1,5 +1,7 @@
 package com.miempresa.tiendaonline.tiendaonline.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -9,28 +11,36 @@ public class DetalleFactura {
     @EmbeddedId
     private DetalleFacturaId id; // compuesto por idFactura e idProducto
 
+    @ManyToOne
+    @MapsId("idFactura")                // Importante para indicar qué parte del ID compuesta es de Factura
+    @JoinColumn(name = "id_factura")    // Se usa para referenciar con la clase Factura.
+    @JsonBackReference                  // Se usa para controlar la serialización de las relaciones bidireccionales
+    private Factura factura;
+
     @Column(name = "cantidad")
-    private Integer descripcion;
+    private Integer cantidad;
 
     @Column(name = "precio_unitario")
-    private Double precio;
+    private Double precioUnitario;
+
+
+
+
 
     public DetalleFactura(){}
 
-    
+
     public DetalleFacturaId getId() { return id; }
     public void setId(DetalleFacturaId id) { this.id = id; }
 
-    // public Long getIdFactura() { return idFactura; }
-    // public void setIdFactura(Long idFactura) { this.idFactura = idFactura; }
+    public Integer getCantidad() { return cantidad; }
+    public void setCantidad(Integer cantidad) { this.cantidad = cantidad; }
 
-    // public Long getIdProducto() { return idProducto; }
-    // public void setIdProducto(Long idProducto) { this.idProducto = idProducto; }
+    public Double getPrecioUnitario() { return precioUnitario; }
+    public void setPrecioUnitario(Double precioUnitario) { this.precioUnitario = precioUnitario; }
 
-    public Integer getDescripcion() { return descripcion; }
-    public void setDescripcion(Integer descripcion) { this.descripcion = descripcion; }
-
-    public Double getPrecio() { return precio; }
-    public void setPrecio(Double precio) { this.precio = precio; }
+    public Factura getFactura() { return factura; }
+    public void setFactura(Factura factura) { this.factura = factura; }
+    
     
 }

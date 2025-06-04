@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "d1f7911b-66ca-4e6d-989b-bd5e18eb3217",
+		"name": "Tienda Online",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20804537"
+	},
+	"item": [
+		{
+			"name": "listar productos",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "listar clientes",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "listar clientes DTO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/cliente/dto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"cliente",
+						"dto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Lorena\",\r\n  \"apellido\": \"Juarez\",\r\n  \"email\": \"lorena@gmail.com\",\r\n  \"fechaRegistro\": \"2024-06-03T00:00:00\",\r\n  \"password\": \"1111\",\r\n  \"direccion\": \"Av. Libertador\",\r\n  \"telefono\": \"123456789\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Cable HDMI\",\r\n  \"descripcion\": \"Cable HDMI de alta velocidad.\",\r\n  \"precio\": \"1250\",\r\n  \"stock\": \"35\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/producto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar facturas",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "listar detalla de facturas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/detallefactura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"detallefactura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar factura y detalles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idCliente\": 3,\r\n  \"fecha\": \"2024-06-03T00:00:00\",\r\n  \"total\": 4000.0,\r\n  \"detalles\": [\r\n    {\r\n      \"id\": { \"idProducto\": 1 },\r\n      \"cantidad\": 2,\r\n      \"precioUnitario\": 3000.0\r\n    },\r\n    {\r\n      \"id\": { \"idProducto\": 2 },\r\n      \"cantidad\": 1,\r\n      \"precioUnitario\": 1000.0\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/factura/completa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"factura",
+						"completa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar factura Sola",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idCliente\": 3,\r\n  \"fecha\": \"2024-06-03T00:00:00\",\r\n  \"total\": 9000.0\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/factura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"factura"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

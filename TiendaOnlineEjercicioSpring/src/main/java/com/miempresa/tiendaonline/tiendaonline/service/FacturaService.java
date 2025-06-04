@@ -5,5 +5,10 @@ import java.util.List;
 import com.miempresa.tiendaonline.tiendaonline.model.Factura;
 
 public interface FacturaService {
+    
     List<Factura> listarFacturas();
+
+    Factura guardar(Factura factura);
+
+    Factura guardarFacturaCompleta(Factura factura);
 }

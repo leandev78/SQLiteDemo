@@ -19,6 +19,7 @@ public class DetalleFacturaServiceImpl implements DetalleFacturaService{
     public List<DetalleFactura> buscarPorIdFactura(Long idFactura) {
 
         return detalleFacturaRepository.findById_IdFactura(idFactura);
+
     }
 
 }

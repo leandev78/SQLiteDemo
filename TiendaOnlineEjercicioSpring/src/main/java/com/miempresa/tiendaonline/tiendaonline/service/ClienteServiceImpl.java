@@ -30,8 +30,14 @@ public class ClienteServiceImpl implements ClienteService {
     public List<ClienteDTO> listarClientesDTO() {
         List<Cliente> clientes = clienteRepository.findAll();
         return clientes.stream()
-                .map(c -> new ClienteDTO(c.getId_cliente(), c.getNombre(), c.getApellido(), c.getEmail()))
+                .map(c -> new ClienteDTO(c.getIdCliente(), c.getNombre(), c.getApellido(), c.getEmail()))
                 .collect(Collectors.toList());    
     }
+
+    @Override
+    public Cliente guardar(Cliente cliente) {
+        return clienteRepository.save(cliente);
+    }
+    
     
 }

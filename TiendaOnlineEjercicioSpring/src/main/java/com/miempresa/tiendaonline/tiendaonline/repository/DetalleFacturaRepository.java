@@ -11,7 +11,7 @@ public interface DetalleFacturaRepository extends JpaRepository<DetalleFactura, 
 
 
     // Declaro un método personalizado que no pertenece a JpaRepository y esto es porque
-    // detalle_factura tiene múltiples registros con el mismo id_factura), pero findById(id) 
+    // detalle_factura tiene múltiples registros con el mismo id_factura, pero findById(id) 
     // busca por clave primaria, no por columna id_factura.
 
     // Analizar
@@ -19,6 +19,8 @@ public interface DetalleFacturaRepository extends JpaRepository<DetalleFactura, 
     // Spring Data JPA permite recorrer la propiedad anidada usando underscore (_).
 
     List<DetalleFactura> findById_IdFactura(Long idFactura);
+
+    List<DetalleFactura> findById_IdProducto(Long idProducto);
 
     
 }

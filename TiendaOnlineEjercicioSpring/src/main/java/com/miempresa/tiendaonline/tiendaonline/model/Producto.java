@@ -8,6 +8,7 @@ import jakarta.persistence.*;
 public class Producto {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
     private Long idProducto;
 
