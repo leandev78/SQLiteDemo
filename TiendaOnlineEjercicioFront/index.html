@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Tienda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="loginPage">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="login()">Ingresar</button>
+    </div>
+
+    <div id="homePage" style="display:none">
+        <nav>
+            <ul>
+                <li onclick="showSection('clientes')">Clientes</li>
+                <li onclick="showSection('productos')">Productos</li>
+                <li onclick="showSection('facturacion')">Facturación</li>
+            </ul>
+        </nav>
+
+        <div class="title" |>
+            <p>Mini Tienda Online - (Actividad con fines pedagógicos) - Desarrolle un FrontEnd y BackEnd con Java</p>
+            <strong>Unpaz</strong>
+        </div>
+        <hr>
+
+        <div id="clientes" class="section">
+            <h3>Clientes</h3>
+            <form id="clienteForm">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="apellido" placeholder="Apellido" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="datetime-local" id="fechaRegistro" placeholder="Fecha de Registro" required>
+                <input type="password" id="password" placeholder="Clave de Usuario" required>
+                <input type="text" id="direccion" placeholder="Dirección" required>
+                <input type="text" id="telefono" placeholder="Teléfono" required>
+                <button type="submit">Agregar Cliente</button>
+            </form>
+            <br/>
+            <table id="clientesTable" border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="productos" class="section" style="display:none">
+            <h3>Productos (Carrito)</h3>
+            <div id="productosContainer"></div>
+        </div>
+
+        <div id="facturacion" class="section" style="display:none">
+            <h3>Facturación</h3>
+            <div id="resumenSeleccion"></div>
+            <button onclick="confirmarFactura()">Confirmar Factura</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
