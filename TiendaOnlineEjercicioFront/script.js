@@ -123,7 +123,7 @@ function loadClientes() {
         });
 }
 
-// Productos y Facturación (lógica básica, puedes expandir)
+// Productos y Facturación 
 function loadProductos() {
     fetch("http://localhost:8085/producto")
         .then((res) => res.json())
@@ -183,40 +183,41 @@ function mostrarResumen() {
 
 function confirmarFactura() {
 
-    if (!selectedClienteId) {
+    if (!clienteSeleccionado.idCliente) {
         alert("Debe seleccionar un cliente.");
         return;
     }
 
-    const total = carrito.reduce((sum, p) => sum + p.precio * p.cantidad, 0);
-
-    // Supongamos que ya tenés seleccionado el cliente
-    // y que tenés un array carrito con los productos seleccionados
+    // Armo mi objeto factura mas su detalle.
+    const totalFactura = carrito.reduce((sum, p) => sum + p.precio * p.cantidad, 0);
 
     const factura = {
-        idCliente: clienteSeleccionado.idCliente, // desde la variable global
-        fecha: new Date().toISOString(), // o podés poner una fija "2024-06-03T00:00:00"
-        total: total,
+        idCliente: clienteSeleccionado.idCliente,
+        fecha: new Date().toISOString(), // fecha actual en formato "2024-06-03T00:00:00"
+        total: totalFactura,
         detalles: carrito.map(item => ({
-            id: { idProducto: item.idProducto },
+            id: { idProducto: item.id },
             cantidad: item.cantidad,
-            precioUnitario: item.precioUnitario
+            precioUnitario: (item.precio * item.cantidad)
         }))
     };
 
-    // fetch("http://localhost:8085/factura/completa", {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json" },
-    //         body: JSON.stringify(factura),
-    //     })
-    //     .then((res) => {
-    //         if (!res.ok) throw new Error("Error al guardar factura");
-    //         return res.json();
-    //     })
-    //     .then(() => {
-    //         alert("Factura registrada con éxito.");
-    //         carrito = [];
-    //         mostrarResumen();
-    //     })
-    //     .catch((err) => alert(err.message));
+    // Guardo la factura y su detalle.
+    fetch("http://localhost:8085/factura/completa", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(factura),
+        })
+        .then(res => {
+            if (!res.ok) throw new Error("Error al guardar factura");
+            return res.json();
+        })
+        .then(() => {
+            alert("Factura registrada con éxito.");
+            carrito.length = 0; // vaciar carrito
+            mostrarResumen();
+        })
+        .catch(err => alert(err.message));
+
+
 }
