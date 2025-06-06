@@ -3,6 +3,8 @@ package com.miempresa.tiendaonline.tiendaonline.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -40,6 +42,13 @@ public class ClienteController {
         return clienteService.guardar(cliente);
 
     }    
+
+    @PostMapping("/login")
+    public ResponseEntity<Cliente> login(@RequestBody Cliente loginRequest) {
+        return clienteService.login(loginRequest.getEmail(), loginRequest.getPassword())
+            .map(cliente -> ResponseEntity.ok(cliente))
+            .orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
+    }
 
     
 }

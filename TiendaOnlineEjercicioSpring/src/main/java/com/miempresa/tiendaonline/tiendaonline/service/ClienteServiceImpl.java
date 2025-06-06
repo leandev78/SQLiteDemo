@@ -1,6 +1,7 @@
 package com.miempresa.tiendaonline.tiendaonline.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,12 @@ public class ClienteServiceImpl implements ClienteService {
     public Cliente guardar(Cliente cliente) {
         return clienteRepository.save(cliente);
     }
+
+    @Override
+    public Optional<Cliente> login(String email, String password) {
+        return clienteRepository.findByEmailAndPassword(email, password);
+    }
+
     
     
 }
