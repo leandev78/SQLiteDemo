@@ -1,0 +1,208 @@
+﻿body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fb;
+  padding: 0px;
+  color: #333;
+}
+
+h2 {
+  color: #296193;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+table.facturas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.subtitulo {
+		color:#296193;
+		font-size: 18px;
+}
+
+.facturas th, .facturas td {
+  border: 1px solid #d0d8e8;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.facturas thead {
+  background-color: #296193;
+  color: #fff;
+}
+
+.facturas tr:nth-child(even) {
+  background-color: #eef2f9;
+}
+
+.facturas tr:hover {
+  background-color: #dce5f3;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  min-width: 100px;
+  height: 36px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.azul {
+  background-color: #4a8cc7;
+  color: #fff;
+}
+
+.azul:hover {
+  background-color: #062a6a;
+  color: #ffffff;
+}
+.form-espaciado {
+	margin-top:40px;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;	
+}
+
+.formulario {
+	/*width: 600px;
+	width-max: 600px;	
+	align-items: center;*/
+	padding: 30px;
+}
+
+.btn-suscribirme {
+	color: #000000;
+}
+
+.card {
+	background-color: #ffffff78 !important;
+}
+
+.text-money {
+	font-size: 18px;
+}
+
+.text-money i {
+	font-size: 28px;
+}
+
+#btnSalir .fa {
+  margin-right: 0.5rem;
+}
+
+/* Aplica un pequeño espacio a la derecha de cada botón */
+.facturas tbody tr td[data-label="Acciones"] .btn {
+  margin-right: 0.5rem;
+}
+@media screen and (max-width: 736px) {
+	.text-money {
+		font-size: 18px;
+		text-align: center;
+	}
+}
+
+/* Tabla responsive */
+
+@media screen and (max-width: 736px) {
+	
+  /* 1) Oculta siempre el thead */
+  .facturas thead {
+    display: none !important;
+  }
+
+  /* 2) Cada tr → flex column para apilar sus celdas */
+  .facturas tbody tr {
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 1rem 0 !important;
+    padding: 1.75rem !important;
+    /*border: 1px solid #ccc !important;*/
+    background: #fff !important;
+  }
+
+  /* 3) Cada td → flex row: label + valor separados */
+  .facturas tbody tr td {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.5rem !important;
+    border-bottom: 1px solid #eee !important;
+  }
+  .facturas tbody tr td:last-child {
+    border-bottom: none !important;
+  }
+
+  /* 4) Inyecta el título antes del contenido y estilízalo */
+  .facturas tbody tr td::before {
+    content: attr(data-label) ":";
+    font-weight: bold !important;
+    flex: 1 1 45% !important;
+    text-align: left !important;
+  }
+
+  /* 5) El contenido real (texto, botones) ocupa el resto */
+  .facturas tbody tr td * {
+    flex: 1 1 55% !important;
+    text-align: right !important;
+  }
+  
+  /* ... tus reglas anteriores ... */
+
+  /* 1) Para que la celda de Acciones apile sus botones verticalmente: */
+  .facturas tbody tr td[data-label="Acciones"] {
+    /* Fuerzo flex-direction: column para ese td */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: .75rem .5rem !important;
+  }
+
+  /* 2) Cada botón ocupa el ancho completo y su texto va centrado */
+  .facturas tbody tr td[data-label="Acciones"] .btn {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+    padding: 0.5rem 0 !important;      /* Más espacio vertical */
+    text-align: center !important;     /* Centra el texto */
+    white-space: nowrap !important;    /* Evita que se rompa el texto */
+    box-sizing: border-box !important; /* Incluye padding en el ancho */
+  }
+
+  /* 3) Elimina el margen extra del último botón */
+  .facturas tbody tr td[data-label="Acciones"] .btn:last-child {
+    margin-bottom: 0 !important;
+  } 
+  
+}
+
+/* Tablet: entre 737px y 1024px */
+@media screen and (max-width: 1024px) and (min-width: 737px) {
+  /* Forzar un poco de espacio entre botones en la misma línea */
+  .facturas tbody tr td[data-label="Acciones"] {
+    /* volvemos a línea única */
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem; /* espaciado uniforme */
+  }
+
+  .facturas tbody tr td[data-label="Acciones"] .btn {
+    flex: 1 1 auto !important;   /* que crezcan según contenido */
+    min-width: 120px;            /* ancho mínimo razonable */
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+}
+
+

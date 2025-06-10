@@ -1,0 +1,511 @@
+/*contenedor principal de todas las paginas*/
+#main-container{
+    margin-top: 50px;
+}
+
+/*casi mas sale con esto. solo quedo el boton desparejo*/
+/*.card {border: 1px solid #ddd;border-radius: 5px;padding: 20px;}
+#noticiasContent{display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;}
+*/
+
+
+/**********************************CARUSEL**********************************************************/
+@media screen and (max-width: 1024px) {/*para que siga apareciendo el texto en pantallas chicas*/
+        .flex-caption,
+	.flexslider .slides li:first-child:nth-last-child(1) .flex-caption,
+	.flexslider .slides li:only-child .flex-caption {
+		display: block;
+	}
+}
+
+@media (max-width: 767px) {
+    .flex-caption-text{
+        text-align: center;
+    }
+    .flex-caption-text h2 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .flex-caption-text p {
+        margin-bottom: 15px;
+    }
+}
+
+/*====================================input subir archivo=============================================*/
+.form-select{
+    background-color:#fff;
+    height:40px;
+    width:100%;
+    border:0;
+    padding-left:10px;
+    border: 1px solid #ced4da;
+}
+
+/*======================================UL CON FONTAWSOME=====================================*/
+ul.arrRight-1, ul.tilde{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+ul.arrRight-1 li, ul.tilde li{
+    text-indent: -0.1em;
+}
+
+ul.arrRight-1 li:before{
+    font-family: 'FontAwesome';
+    content: '\f054';
+    margin:0 5px 0 -15px;
+    color: green;/*#4a8cc7;*/
+    font-size: 14px;
+}
+
+ul.tilde li:before{
+    font-family: 'FontAwesome';
+    content: '\f00c';
+    margin:0 5px 0 -15px;
+    color: green;/*#4a8cc7;*/
+    font-size: 14px;
+}
+
+/*=================BOTON DENTRO DE LOS MEGA MENU Y EL MENU NORMAL=========================*/
+.dd-menu .megamenu-container .megamenu-sub-title{/*subtitulos del megamenu de clientes*/
+    font-size: 16px;
+}
+
+.dd-menu .megamenu-container.matric_contrat .megamenu-sub-title{/*subtitulos del megamenu de matriculados*/
+    font-size: 15px;
+}
+
+.dd-menu .megamenu-container ul li{/*tamaÃ±o de letra de ambos megamenus*/
+	font-size:13px;
+}
+
+.dd-menu > li > ul li{
+	font-size:13px;
+}
+
+/*=================ICONOS FONDO REDONDO GRIS CON BORDE EXTERIOR, TEXTO ABAJO=========================*/
+/*icono circular fondo gris. El borde es el del propio circulo. No el exterior*/
+/*.icon-box.ibox-light .ibox-icon i {
+    border:1px solid #ddd;
+    background-color:#e7e7e7;
+    color:#8f8f8f;
+}*/
+
+/*Borde exterior del icono circula con fondo gris*/
+/*.icon-box.ibox-light.ibox-outline .ibox-icon {
+	border-color:#ddd;
+}*/
+
+/*icono telefono emergencia (consultas y tramites y home)*/
+/*.icon-box.ibox-light .ibox-icon-emergencias i, .icon-box.ibox-plain .ibox-icon.ibox-icon-emergencias i{
+    color:red;
+}*/
+
+/*icono whatsapp (consultas y tramites y home)*/
+/*.icon-box.ibox-light .ibox-icon-whatsapp i, .icon-box.ibox-plain .ibox-icon.ibox-icon-whatsapp i{
+    color:green;
+}*/
+
+/*tamaÃ±o de los iconos del home (telefonos)*/
+/*.icon-box.ibox-plain.home .ibox-icon i{
+    font-size: 50px;
+*/
+
+/*mouse over sobre icono circular fondo gris*/
+/*.icon-box.ibox-light .ibox-icon i:hover {
+    background-color:#c7c7c7;
+    color:#fff;
+}*/
+
+
+/*=================TRES BOTONES BAJO EL CAROUSEL=========================*/
+.featured-links .featured-link{
+    padding:40px 30px 0;
+}
+
+/*.featured-links .featured-link i{
+    font-size: 40px;
+}*/
+
+@media (max-width: 1065px) {
+    .home-feat-link-text{
+        font-size: 20px;
+    }
+    
+    .featured-links .featured-link i{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1001px) {
+    .featured-links .featured-link {
+        padding:20px 30px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .featured-links .featured-link {
+        padding:30px 30px 0;
+    }
+}
+
+/*=================RADIO BUTTON====================*/
+/*span del radiobutton*/
+.radio-button-text{
+    /*color:gray;
+    font-family:'Poppins', sans-serif;*/
+    font-size:14px;
+    font-weight:500;
+}
+
+/*esto alinea los radio button con su texto*/
+input[type="radio"] {
+    margin-top: -4px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/*=================FORMAS Y LUGARES DE PAGO=========================*/
+#formPago-tabs-container{display:block}
+#formPago-acordion-container{display:none}
+
+@media(max-width: 740px){
+    #formPago-tabs-container{display:none}
+    #formPago-acordion-container{display:block}
+}
+
+/*=================HOGARES FINANCIACION=========================*/
+.ul-financiacion { padding-left:20px; list-style:none; }
+.ul-financiacion li { margin-bottom:15px; padding:10px; border-bottom:1px solid #eeeeee;font-size:16px; }
+.ul-financiacion li:before {    
+    font-family: 'FontAwesome';
+    content: '\f054';
+    margin: 0 15px 0 -15px;
+    color:#4a8cc7;
+    font-size:18px;
+    /*line-height:40px;*/
+}
+
+/*=========================================Noticias pager. y noticias.php==============================================*/
+#page_navigation a{margin:2px;color:#0698d9;text-decoration:none;padding:15px;}
+#page_navigation a:hover{background-color:#e9e9e9;}
+.page_link{-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;}
+.previous_link{-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;}
+.next_link{color:#0698d9;-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;}
+.next_link:hover{background-color:#e9e9e9;}
+.active_page{background:#4a8cc7;color:white !important;}
+
+
+.rowCard {/*importante para que queden del mismo height*/
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  margin-bottom: 20px;
+}
+
+.not-fecha{
+    text-transform:uppercase;
+    font-weight:700;
+    font-size:11px;
+    color:#333;
+}
+
+.card-body{
+    padding:1.25rem 1.25rem 5px 1.25rem;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.card-body p.lead{
+    line-height: 23px;
+    color:#212121;
+    font-size: 18px;
+    margin-bottom: 15px
+}
+
+.card-footer{
+    background-color:#fff;
+    border:0;
+    padding: 0.75rem 1.25rem;
+}
+
+/*==============================ENTENDÃ‰ TU FACTURAS============================================================*/
+.fac-container{width:auto;margin:0 auto;position:relative;display:block;box-sizing:content-box}
+.fac-btn{cursor:pointer;height:21px;width:21px;border-radius:50%;background-color:#306795;display:block;position:absolute;padding:3px 0 0 1px;line-height:13px}
+/*.fac-btn{cursor:pointer;height:22px;width:22px;border-radius:50%;background-color:red;display:block;position:absolute;padding:0px 0 0px 0px;line-height:15px}*/
+.fac-btn:hover{background-color:green;}
+.fac-btn p i{color:#fff;font-size:14px}
+/*.fac-btn p{font-size:12px;text-align:center;color:white;font-weight:700;font-family:'Poppins', sans-serif;}*/
+
+/*.popover{
+    border: 1px solid gray;
+    -webkit-box-shadow: 0 0px 5px #777;
+    -moz-box-shadow:0 0px 5px #777;
+    box-shadow: 0 0px 5px #777;
+}
+.popover-content {
+    background-color:white;
+    color:gray;
+    padding:10px;
+}*/
+
+.popover{
+    border: 0 !important;
+    border-radius: 3px;
+    background-color:green;
+    -webkit-box-shadow:0 0px 3px rgba(0,0,0,.4);
+    box-shadow:0 0px 3px rgba(0,0,0,.4);
+    -moz-box-shadow:0 0px 3px rgba(0,0,0,.4);
+    /*-webkit-box-shadow: none;
+    -moz-box-shadow:none;
+    box-shadow:none;*/
+    /*border:1px solid green !important;
+    border-color: green !important;*/
+    font-family:"Lato",sans-serif;
+}
+
+/*este es el original de bootstap*/
+/*.popover{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1060;
+    display:none;
+    max-width:276px;
+    padding:1px;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:14px;
+    font-style:normal;
+    font-weight:400;
+    line-height:1.42857143;
+    text-align:left;
+    text-align:start;
+    text-decoration:none;
+    text-shadow:none;
+    text-transform:none;
+    letter-spacing:normal;
+    word-break:normal;
+    word-spacing:normal;
+    word-wrap:normal;
+    white-space:normal;
+    background-color:#fff;
+    -webkit-background-clip:padding-box;
+    background-clip:padding-box;
+    border:1px solid #ccc;
+    border:1px solid rgba(0,0,0,.2);
+    border-radius:6px;
+    -webkit-box-shadow:0 5px 10px rgba(0,0,0,.2);
+    box-shadow:0 5px 10px rgba(0,0,0,.2);
+    line-break:auto
+}*/
+
+.popover-title{
+    background-color:#007800;/*#255625;*/
+    color:#fff;
+    font-size:14px;
+    text-align:left;
+    border-radius: 0;
+    border-bottom: 0;/*1px solid #005b00;*/
+    font-weight: 800;
+}
+
+.popover-content{
+    padding:9px 14px;
+    color:#fff
+}
+
+
+.popover.right .arrow:after {
+    border-right-color: green;
+}
+
+.popover.left .arrow:after{
+    border-left-color: green;  
+}
+
+.popover.bottom .arrow:after{
+    border-bottom-color: green;
+}
+
+.popover.top .arrow:after{
+    border-top-color: green;
+}
+
+
+
+/*hogares*/
+.fac-btn.btn1-hog{top:2.7%;left:39%}/*referencia nro*/
+.fac-btn.btn3-hog{top:4.3%;left:39%}/*preiodicidad de lectura*/
+.fac-btn.btn2-hog{top:4.3%;left:58.8%}/*periodo de liquidacion*/
+.fac-btn.btn4-hog{top:6.3%;left:39%}/*titular del suministro*/
+.fac-btn.btn10-hog{top:8.2%;left:39%}/*domicilio postal*/
+.fac-btn.btn23-hog{top:10.5%;left:39%}/*codigo de pago sin imprimir factura*/
+.fac-btn.btn11-hog{top:12.6%;left:39%}/*fecha de vencimiento*/
+.fac-btn.btn12-hog{top:12.6%;left:63.5%}/*ciente*/
+.fac-btn.btn6-hog{top:20.5%;left:1%}/*tipo de cliente*/
+.fac-btn.btn8-hog{top:23%;left:1%}/*iva*/
+.fac-btn.btn5-hog{top:25%;left:1%}/*suministro*/
+.fac-btn.btn9-hog{top:27.7%;left:1%}/*direccion*/
+.fac-btn.btn7-hog{top:20.5%;left:23%}/*tarifa*/
+.fac-btn.btn24-hog{top:23%;left:23%}/*CUIT/DNI*/
+.fac-btn.btn16_1-hog{top:20%;left:40%}/*conceptos.gas*/
+.fac-btn.btn16_2-hog{top:25%;left:40%}/*conceptos.impuesto y conceptos*/
+.fac-btn.btn16_3-hog{top:31.7%;left:40%}/*conceptos.iva*/
+.fac-btn.btn16_4-hog{top:34%;left:40%}/*conceptos.impuestos tasas.*/
+.fac-btn.btn13-hog{top:35%;left:28%}/*grafico*/
+.fac-btn.btn14-hog{top:48.5%;left:1%}/*detalle de deuda pendiente*/
+.fac-btn.btn15-hog{top:59.4%;left:1%}/*informacion importante*/
+.fac-btn.btn21-hog{top:59.8%;left:45.4%}/*total a pagar*/
+.fac-btn.btn17-hog{top:68.6%;left:1.5%}/*medidor*/
+.fac-btn.btn18-hog{top:67.5%;left:19%}/*lectura anterior - lectura actual*/
+.fac-btn.btn19-hog{top:70%;left:59%}/*consumo facturado*/
+.fac-btn.btn20-hog{top:72%;left:1%}/*tarifas aplicadas*/
+.fac-btn.btn22-hog{top:85%;left:41%}/*talon de pago*/
+
+
+/*comercios y profecionales*/
+.fac-btn.btn1-com-prof{top:2%;left:38.5%}/*referencia nro*/
+.fac-btn.btn3-com-prof{top:4.3%;left:41.8%}/*periodicidad*/
+.fac-btn.btn2-com-prof{top:4.3%;left:58.7%}/*periodo de liquidacion*/
+.fac-btn.btn4-com-prof{top:6%;left:38.5%}/*titular del suministro*/
+.fac-btn.btn10-com-prof{top:7.5%;left:38.5%}/*domicilio postal*/
+.fac-btn.btn23-com-prof{top:11%;left:38.5%}/*codigo de pago sin imprimir factura*/
+.fac-btn.btn11-com-prof{top:12.5%;left:38.5%}/*fecha de vencimiento*/
+.fac-btn.btn12-com-prof{top:12.5%;left:62.7%}/*cliente*/
+.fac-btn.btn6-com-prof{top:20.5%;left:0.5%}/*tipo de cliente*/
+.fac-btn.btn5-com-prof{top:25%;left:0.5%}/*suministro*/
+.fac-btn.btn9-com-prof{top:27.7%;left:0.5%}/*direccion*/
+.fac-btn.btn8-com-prof{top:23%;left:0.5%}/*iva*/
+.fac-btn.btn7-com-prof{top:20.5%;left:22.8%}/*tarifa*/
+.fac-btn.btn24-com-prof{top:23%;left:22.8%}/*cuit dni*/
+.fac-btn.btn16_1-com-prof{top:20%;left:39.6%}/*conceptos.gas*/
+.fac-btn.btn16_2-com-prof{top:24.8%;left:39.6%}/*conceptos.impuestos y conceptos*/
+.fac-btn.btn16_3-com-prof{top:33%;left:39.6%}/*conceptos.iva*/
+.fac-btn.btn16_4-com-prof{top:35.3%;left:39.6%}/*conceptos.tasas y contribuciones*/
+.fac-btn.btn13-com-prof{top:35%;left:28%}/*grafico de consumo*/
+.fac-btn.btn14-com-prof{top:48.3%;left:19.5%}/*detalle deuda pendiente*/
+.fac-btn.btn15-com-prof{top:58%;left:2%}/*informacion importante*/
+.fac-btn.btn21-com-prof{top:59.8%;left:45%}/*total a pagar*/
+.fac-btn.btn17-com-prof{top:68.8%;left:1.5%}/*medidor*/
+.fac-btn.btn18-com-prof{top:67.4%;left:19%}/*lectura anterior lectura actual*/
+.fac-btn.btn19-com-prof{top:70%;left:58%}/*consumo a... Consumo facturado*/
+.fac-btn.btn20-com-prof{top:72.5%;left:0.5%}/*tarifas aplicadas*/
+.fac-btn.btn22-com-prof{top:84.5%;left:40.3%}/*talon de pago*/
+
+/*grandes clientes*/
+.fac-btn.btn1-ind{top:18.5%;left:51.1%}/*referencia nro*/
+.fac-btn.btn2-ind{top:18.5%;left:1.5%}/*periodicidad*/
+.fac-btn.btn3-ind{top:1.5%;left:51%}/*razon social. titular del servicio*/
+.fac-btn.btn4-ind{top:11.5%;left:1.5%}/*suministro nro*/
+.fac-btn.btn5-ind{top:16%;left:28%}/*tarifa*/
+.fac-btn.btn6-ind{top:13.5%;left:1.5%}/*direccion de suministro*/
+.fac-btn.btn7-ind{top:3.5%;left:51%}/*domicilio postal*/
+.fac-btn.btn8-ind{top:12%;left:51.2%}/*vencimiento de la liquidacion del servicio*/
+.fac-btn.btn9-ind{top:9.5%;left:1.5%}/*cliente nro*/
+.fac-btn.btn10-ind{top:40%;left:23%}/*grafico de consumo*/
+.fac-btn.btn11-ind{top:27%;left:28%}/*conceptos*/
+.fac-btn.btn12-ind{top:27%;left:8%}/*numero de medidor*/
+.fac-btn.btn13-ind{top:23%;left:26%}/*lectura actual - lectura anterior*/
+.fac-btn.btn14-ind{top:25%;left:80%}/*consumo facturado*/
+.fac-btn.btn15-ind{top:49%;left:25%}/*detalle deuda pendiente*/
+.fac-btn.btn16-ind{top:56.5%;left:27%}/*total a pagar*/
+.fac-btn.btn17-ind{top:63%;left:2%}/*tarifas aplicadas*/
+
+/*gnc*/
+.fac-btn.btn1-gnc{top:18.3%;left:51.2%}/*referencia nro*/
+.fac-btn.btn2-gnc{top:18.5%;left:2%}/*periodicidad*/
+.fac-btn.btn3-gnc{top:1.5%;left:51%}/*razon social*/
+.fac-btn.btn4-gnc{top:11.5%;left:2%}/*suministro*/
+.fac-btn.btn5-gnc{top:16%;left:28.2%}/*tarifa*/
+.fac-btn.btn6-gnc{top:13.5%;left:2%}/*direccion del suministro*/
+.fac-btn.btn7-gnc{top:3.5%;left:51%}/*domicilio postal*/
+.fac-btn.btn8-gnc{top:11.8%;left:51.2%}/*vencimiento de la liquidacion del servicio*/
+.fac-btn.btn9-gnc{top:9.5%;left:2%}/*cliente*/
+.fac-btn.btn10-gnc{top:40%;left:23%}/*grafico de consumo*/
+.fac-btn.btn11-gnc{top:27%;left:28%}/*conceptos*/
+.fac-btn.btn12-gnc{top:27%;left:8%}/*numero de medidor*/
+.fac-btn.btn13-gnc{top:23%;left:26.5%}/*lectura actual - lectura anterior*/
+.fac-btn.btn14-gnc{top:25%;left:80%}/*consumo facturado*/
+.fac-btn.btn15-gnc{top:49%;left:23%}/*deuda pendiente*/
+.fac-btn.btn16-gnc{top:56.5%;left:27.5%}/*total a pagar*/
+.fac-btn.btn17-gnc{top:62%;left:2%}/*tarifas aplicadas*/
+
+
+/*=================FOOTER=========================*/
+/*Contacto*/
+.site-footer .footer_widget ul li i.foot-contact-icon{
+    font-size:18px;
+    color:#fff;
+}
+
+.site-footer .footer_widget ul li span{
+    font-size:13px;
+}
+
+.site-footer .footer_widget ul li a{
+    font-size:13px;
+}
+
+/*saco la flechita que viene por default para poner mi icono. La flechita aparecÃ­a solo cuando es link*/
+.site-footer .footer_widget ul li i.fa-caret-right:before{
+    display:none;
+}
+
+/*============================whatsapp flotante===============================================*/
+#whatsapp-flotante{
+    position:fixed;
+    right:-40px;
+    bottom:60px;
+    background-color:green;
+    width:40px;
+    height:40px;
+    text-align:center;
+    color:#fff;
+    line-height:43px;
+    overflow:hidden;
+    font-size:17px;
+    display:block;
+    z-index:1111;
+    -webkit-transition:all 0.3s ease 0.2s;
+    -moz-transition:all 0.3s ease 0.2s;
+    -ms-transition:all 0.3s ease 0.2s;
+    -o-transition:all 0.3s ease 0.2s;
+    transition:all 0.3s ease 0.1s;
+}
+
+/*===========================video youtube================================================*/
+/* Start: Video Responsive */
+.video-responsive {
+    overflow:hidden;
+    padding-bottom:400px; /* Adecua este valor para controlar la altura del video */
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+/* End: Video Responsive */

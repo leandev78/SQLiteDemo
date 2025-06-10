@@ -1,0 +1,107 @@
+/* Alert */
+
+.swal-wide {
+  width: 600px !important;
+  max-width: 90% !important;
+}
+
+
+/* Loading */
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ccc;
+  border-top-color: #2980b9;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  margin: 10px auto;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+/* El footer siempre abajo */
+.site-footer-bottom {
+    margin-top: auto;
+}
+
+
+#main-containers{
+	margin-top:40px;
+}
+
+#page-container {
+	position: relative;
+	min-height: 100vh;
+}
+
+#content-wrap {
+	padding-bottom: 8.5rem;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 8.5rem;
+}
+
+.placeholder-img {
+	width: 100%;
+	height: 200px;
+	background-color: #e0e0e0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.placeholder-img img {
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+	display: block;
+}
+
+.step-title {
+	font-weight: bold;
+	color: #006400;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+}
+
+.form-captcha {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mensajes {
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+.text-info {
+	font-weight: bold;
+	text-align: center;
+	padding-bottom:30px;
+    margin: 0 0 15px 0;
+    color: #333;
+    font-weight: 400;
+    line-height: 1.5em;
+    font-family: 'Lato', serif;
+	font-size:42px;
+
+}
+
+#seccion-formulario {
+	padding-bottom:20px;
+}
+@media screen and (max-width: 736px) {
+	.btnBuscarFactura{
+		align-items: center;
+		text-align:center;
+	}
+}
+

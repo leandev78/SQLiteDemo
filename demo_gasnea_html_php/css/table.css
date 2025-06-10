@@ -1,0 +1,113 @@
+/*si quiero hacer otra tabla agrego otras media queris iguales pero con otro nombre de class. Y tambien cambiar los nombres de content de las columnas*/
+
+.limiter {width: 100%;margin: 0 auto;}
+.container-table100 {width: 100%;/*min-height: 100vh;*/background:#f5f5f5;border:1px solid #eee;border-radius:0px;display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -ms-flexbox;display: flex;align-items: center;justify-content: center;flex-wrap: wrap;padding: 10px 20px 20px 20px;}
+.wrap-table100 {width: 1170px;}
+table {border-spacing: 1;border-collapse: collapse;background: white;border-radius: 0px;overflow: hidden;width: 100%;margin: 0 auto;position: relative;border:1px solid #d7d7d7;}
+table * {position: relative;}
+table td, table th {padding-left: 8px;}
+table td, table th {padding-top:10px;padding-bottom:10px;}
+table thead tr {height: 60px;background: #474747;}
+table tbody tr {height: 50px;}
+table tbody tr:last-child {border: 0;}
+table td, table th {text-align: left;}
+table td.l, table th.l {text-align: right;}
+table td.c, table th.c {text-align: center;}
+table td.r, table th.r {text-align: center;}
+
+.table100-head th{font-size: 16px;color: #fff;line-height: 1.2;font-weight: unset;}
+
+tbody tr:nth-child(even) {background-color: #f5f5f5;}
+
+tbody tr {font-size: 14px;color: #808080;line-height: 1.2;font-weight: unset;}
+
+tbody tr:hover {color: #555555;background-color: #f5f5f5;cursor: pointer;}
+
+.column1 {width: 33%;padding-left: 10px;}
+.column2 {width: 33%;}
+.column3 {width: 33%;padding-right: 10px;}
+.column4 {width: 110px;text-align: right;}
+.column5 {width: 170px;text-align: right;}
+.column6 {width: 222px;text-align: right;padding-right: 62px;}
+
+
+/*****para la tabla matriculados****/
+.column1-matric {padding-left: 10px;}
+.column2-matric {}
+.column3-matric {}
+.column4-matric {}
+.column5-matric {}
+.column6-matric {}
+.column7-matric {text-align: center;}
+.column8-matric {padding-right: 10px;}
+.column9-matric {}
+
+/**************************tablas nuestas oficinas*************************************/
+@media screen and (max-width: 992px) {
+  .table-resp td, .table-resp th {padding-top:0px;padding-bottom:0px;}
+  .table-resp {display: block;}
+  .table-resp > *, .table-resp tr, .table-resp td, .table-resp th {display: block;}
+  .table-resp thead {display: none;}
+  .table-resp tbody tr {height: auto;padding: 37px 0;}
+  .table-resp tbody tr td {padding-left: 40% !important;margin-bottom: 24px;}
+  .table-resp tbody tr td:last-child {margin-bottom: 0;}
+  .table-resp tbody tr td:before {font-size: 14px;color: #999999;line-height: 1.2;font-weight: unset;position: absolute;width: 40%;left: 30px;top: 0;}
+  .table-resp tbody tr td:nth-child(1):before {content: "Localidad";}
+  .table-resp tbody tr td:nth-child(2):before {content: "Dirección";}
+  .table-resp tbody tr td:nth-child(3):before {content: "Horario";}
+ 
+  .column4, .column5, .column6 {text-align: left;}
+  .column4, .column5, .column6, .column1, .column2, .column3 {width: 100%;}
+
+  tbody tr {font-size: 14px;}
+}
+
+@media (max-width: 576px) {
+  .container-table100 {padding-left: 15px;padding-right: 15px;}
+}
+
+/**********************************tabla hogares financiacion********************************/
+@media screen and (max-width: 992px) {
+  .table-resp-financ td, .table-resp-financ th {padding-top:0px;padding-bottom:0px;}
+  .table-resp-financ {display: block;}
+  .table-resp-financ > *, .table-resp-financ tr, .table-resp-financ td, .table-resp-financ th {display: block;}
+  .table-resp-financ thead {display: none;}
+  .table-resp-financ tbody tr {height: auto;padding: 37px 0;}
+  .table-resp-financ tbody tr td {padding-left: 40% !important;margin-bottom: 24px;}
+  .table-resp-financ tbody tr td:last-child {margin-bottom: 0;}
+  .table-resp-financ tbody tr td:before {font-size: 14px;color: #999999;line-height: 1.2;font-weight: unset;position: absolute;width: 40%;left: 30px;top: 0;}
+  .table-resp-financ tbody tr td:nth-child(1):before {content: "Cuotas/Monto";}
+  .table-resp-financ tbody tr td:nth-child(2):before {content: "$10.000";}
+  .table-resp-financ tbody tr td:nth-child(3):before {content: "$15.000";}
+  .table-resp-financ tbody tr td:nth-child(4):before {content: "$20.000";}
+ 
+  .column4, .column5, .column6 {text-align: left;}
+  .column4, .column5, .column6, .column1, .column2, .column3 {width: 100%;}
+
+  tbody tr {font-size: 14px;}
+}
+
+/****************************************tabla matriculados***************************************/
+@media screen and (max-width: 992px) {
+  .table-resp-matric td, .table-resp-matric th {padding-top:0px;padding-bottom:0px;}
+  .table-resp-matric {display: block;}
+  .table-resp-matric > *, .table-resp-matric tr, .table-resp-matric td, .table-resp-matric th {display: block;}
+  .table-resp-matric thead {display: none;}
+  .table-resp-matric tbody tr {height: auto;padding: 37px 0;}
+  .table-resp-matric tbody tr td {padding-left: 40% !important;margin-bottom: 24px; font-size: 12px;}
+  .table-resp-matric tbody tr td:last-child {margin-bottom: 0;}
+  .table-resp-matric tbody tr td:before {font-size: 13px;color: #999999;line-height: 1.2;font-weight: unset;position: absolute;width: 40%;left: 30px;top: 0;}
+  .table-resp-matric tbody tr td:nth-child(1):before {content: "Apellido";}
+  .table-resp-matric tbody tr td:nth-child(2):before {content: "Nombre";}
+  .table-resp-matric tbody tr td:nth-child(3):before {content: "Dirección";}
+  .table-resp-matric tbody tr td:nth-child(4):before {content: "Teléfono";}
+  .table-resp-matric tbody tr td:nth-child(5):before {content: "Email";}
+  .table-resp-matric tbody tr td:nth-child(6):before {content: "Tipo Matrícula";}
+  .table-resp-matric tbody tr td:nth-child(7):before {content: "Nro Matrícula";}
+  .table-resp-matric tbody tr td:nth-child(8):before {content: "Vigencia";}
+ 
+  .column6-matric, .column7-matric {text-align: left;}
+  .column4-matric, .column5-matric, .column6-matric, .column7-matric, .column8-matric, .column1-matric, .column2-matric, .column3-matric {width: 100%;}
+
+  tbody tr {font-size: 14px;}
+}

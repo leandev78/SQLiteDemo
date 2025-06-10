@@ -1,0 +1,173 @@
+/* -------------------------------------------- */
+/* Reset básico y configuración general         */
+/* -------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333333;
+  height: 100%;
+}
+
+/* -------------------------------------------- */
+/* Cabezote oscuro (al estilo Gas NEA)          */
+/* -------------------------------------------- */
+.cabezal {
+  /*background-color: #004080;*/
+  color: 333333;
+  /*padding: 24px 0;*/
+  text-align: center;
+}
+
+.cabezal .container-cabezal {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.cabezal h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.cabezal p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* -------------------------------------------- */
+/* Wrapper del formulario                       */
+/* -------------------------------------------- */
+.wrapper-formulario {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* -------------------------------------------- */
+/* Tarjeta blanca que contiene el form          */
+/* -------------------------------------------- */
+.tarjeta-form {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 800px; /* ajuste para dar espacio a imagen + formulario */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+}
+
+/* -------------------------------------------- */
+/* Contenido de la tarjeta: imagen + formulario */
+/* -------------------------------------------- */
+.contenido-tarjeta {
+  display: flex;
+  /* No forzamos flex-wrap aquí; por defecto intentará meter la imagen
+     y el formulario en la misma fila hasta que el ancho lo permita. */
+  gap: 24px; /* espacio entre la imagen y el formulario */
+}
+
+/* -------------------------------------------- */
+/* Sección de la imagen de factura              */
+/* -------------------------------------------- */
+.imagen-factura {
+  /* 0 0 400px = grow:0, shrink:0, flex-basis:400px */
+  flex: 0 0 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-factura img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* -------------------------------------------- */
+/* Sección del formulario                       */
+/* -------------------------------------------- */
+.formulario-seccion {
+  /* 1 1 auto = grow:1, shrink:1, flex-basis:auto */
+  flex: 1 1 auto;
+}
+
+/* -------------------------------------------- */
+/* Labels e inputs                              */
+/* -------------------------------------------- */
+.tarjeta-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.tarjeta-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+
+.tarjeta-form input[type="text"]:focus {
+  outline: none;
+  border-color: #004080;
+}
+
+/* -------------------------------------------- */
+/* Contenedor para el reCAPTCHA                 */
+/* -------------------------------------------- */
+.captcha-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+/* -------------------------------------------- */
+/* Botón principal                              */
+/* -------------------------------------------- */
+.tarjeta-form button {
+  width: 100%;
+  background-color: #004080;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tarjeta-form button:hover {
+  background-color: #003366;
+}
+
+/* -------------------------------------------- */
+/* Responsive (móvil)                           */
+/* -------------------------------------------- */
+@media (max-width: 768px) {
+  .contenido-tarjeta {
+    flex-direction: column;
+  }
+
+  .imagen-factura,
+  .formulario-seccion {
+    /* Cuando se reduce a columna, ambas ocupan 100% */
+    flex: 1 1 100%;
+  }
+
+  .tarjeta-form {
+    padding: 24px 16px;
+  }
+}
